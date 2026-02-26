@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integritetspolicy — Föräldradagar</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #FFFDF3;
+            color: #1C1C1E;
+            line-height: 1.7;
+        }
+        .container { max-width: 680px; margin: 0 auto; padding: 40px 20px 80px; }
+        h1 { font-size: 2rem; margin-bottom: 8px; }
+        .updated { color: #6E6E73; font-size: 0.9rem; margin-bottom: 40px; }
+        h2 { font-size: 1.3rem; margin: 32px 0 12px; color: #1C1C1E; }
+        p, li { color: #3A3A3C; font-size: 1rem; margin-bottom: 12px; }
+        ul { padding-left: 20px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        .highlight {
+            background: #F5F3E9;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        .highlight strong { color: #839BEC; }
+        a { color: #839BEC; }
+        .back { display: inline-block; margin-bottom: 24px; color: #839BEC; text-decoration: none; font-size: 0.9rem; }
+        .back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back">&larr; Tillbaka</a>
+        <h1>Integritetspolicy</h1>
+        <p class="updated">Senast uppdaterad: 25 februari 2026</p>
+
+        <div class="highlight">
+            <strong>Sammanfattning:</strong> Föräldradagar lagrar all din data lokalt på din enhet. Vi samlar inte in, säljer eller delar dina personuppgifter. Den enda datan som lämnar din enhet är frågor du ställer till AI-rådgivaren.
+        </div>
+
+        <h2>1. Vilka vi är</h2>
+        <p>Föräldradagar är en iOS-app som hjälper svenska föräldrar att planera sin föräldraledighet. Appen utvecklas och drivs av Föräldradagar ("vi", "oss").</p>
+
+        <h2>2. Data vi INTE samlar in</h2>
+        <p>Vi samlar inte in följande data:</p>
+        <ul>
+            <li>Namn, e-postadress eller kontaktuppgifter</li>
+            <li>Inkomstuppgifter eller ekonomisk information</li>
+            <li>Barnets födelsedatum eller familjeuppgifter</li>
+            <li>Platsdata eller IP-adress</li>
+            <li>Användningsstatistik eller analyser</li>
+            <li>Enhetsidentifierare eller spårningsdata</li>
+        </ul>
+
+        <h2>3. Lokal datalagring</h2>
+        <p>All information du anger i appen — namn, inkomster, barnets födelsedatum, planerade ledighetsdagar — lagras <strong>enbart lokalt på din enhet</strong> med Apples SwiftData-ramverk. Datan synkas inte till någon server och lämnar aldrig din enhet (förutom vid AI-frågor, se nedan).</p>
+
+        <h2>4. AI-rådgivaren</h2>
+        <p>När du ställer en fråga till AI-rådgivaren skickas följande data till Anthropics API (Claude):</p>
+        <ul>
+            <li>Din fråga (det du skriver)</li>
+            <li>Anonymiserad familjekontext (antal dagar kvar, inkomstnivå, barnets ålder) — <strong>inga namn skickas</strong></li>
+            <li>Konversationshistorik för den aktuella sessionen</li>
+        </ul>
+        <p>Anthropic behandlar denna data enligt <a href="https://www.anthropic.com/privacy" target="_blank">sin integritetspolicy</a>. Anthropic använder inte API-data för att träna sina modeller.</p>
+
+        <h2>5. Köp och prenumerationer</h2>
+        <p>Köp hanteras helt av Apple genom App Store. Vi har inte tillgång till dina betalningsuppgifter. Apple hanterar all betalningsinformation enligt <a href="https://www.apple.com/legal/privacy/" target="_blank">Apples integritetspolicy</a>.</p>
+
+        <h2>6. Tredjepartstjänster</h2>
+        <p>Appen använder följande tredjepartstjänster:</p>
+        <ul>
+            <li><strong>Anthropic Claude API</strong> — för AI-rådgivaren (se punkt 4)</li>
+            <li><strong>Apple StoreKit</strong> — för köp och prenumerationer</li>
+        </ul>
+        <p>Vi använder inga analys-, reklam- eller spårningsverktyg.</p>
+
+        <h2>7. Barns integritet</h2>
+        <p>Appen samlar inte medvetet in personuppgifter från barn. Appen är avsedd för föräldrar och vårdnadshavare. Barnets födelsedatum som anges lagras enbart lokalt för att beräkna ledighetsdagar och deadlines.</p>
+
+        <h2>8. Dina rättigheter (GDPR)</h2>
+        <p>Eftersom all data lagras lokalt på din enhet har du full kontroll:</p>
+        <ul>
+            <li><strong>Radera data:</strong> Avinstallera appen för att radera all data, eller rensa i appens inställningar</li>
+            <li><strong>Exportera data:</strong> Appen lagrar data lokalt — du äger den helt</li>
+            <li><strong>Rätt till information:</strong> Denna policy beskriver all databehandling</li>
+        </ul>
+
+        <h2>9. Ändringar i policyn</h2>
+        <p>Vi kan uppdatera denna integritetspolicy vid behov. Ändringar publiceras på denna sida med nytt datum. Väsentliga ändringar meddelas i appen.</p>
+
+        <h2>10. Kontakt</h2>
+        <p>Har du frågor om vår integritetspolicy? Kontakta oss:</p>
+        <p>E-post: <a href="mailto:hej@foraldradagar.se">hej@foraldradagar.se</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Första versionen av Föräldradagar!
+
+- Fullständig översikt över alla 480 dagar
+- Beräkna exakt ersättning baserat på din inkomst
+- Planera ledigheten med visuell tidslinje
+- AI-rådgivare som kan hela föräldraförsäkringen
+- Stöd för tvillingar och flerlingar
+- Alla regler och belopp uppdaterade för 2026

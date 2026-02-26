@@ -1,0 +1,49 @@
+# Deliverfile — App Store Connect configuration
+# Docs: https://docs.fastlane.tools/actions/deliver/
+
+# App metadata
+app_identifier "com.foraldradagar.app"
+# username "your@email.com"
+
+# Metadata
+metadata_path "./fastlane/metadata"
+
+# Primary language
+primary_language "sv-SE"
+
+# Primary category
+primary_category "HEALTH_AND_FITNESS"
+secondary_category "FINANCE"
+
+# Pricing
+price_tier 0  # Free (IAP for premium)
+
+# URLs
+privacy_url({
+  "sv-SE" => "https://foraldradagar.github.io/integritetspolicy"
+})
+support_url({
+  "sv-SE" => "https://foraldradagar.github.io/support"
+})
+marketing_url({
+  "sv-SE" => "https://foraldradagar.github.io/"
+})
+
+# Review information
+app_review_information(
+  first_name: "Benjamin",
+  last_name: "",
+  phone_number: "",
+  email_address: "",
+  notes: "Appen kräver ingen inloggning. All data lagras lokalt på enheten. AI-rådgivaren kräver internetuppkoppling."
+)
+
+# Skip screenshots upload (handle separately)
+skip_screenshots true
+
+# Don't auto-submit for review
+submit_for_review false
+automatic_release false
+
+# App rating
+app_rating_config_path "./fastlane/rating_config.json"

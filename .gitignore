@@ -1,0 +1,26 @@
+# Secrets — never commit API keys
+Foraldradagar/App/Secrets.swift
+
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.xcscmblueprint
+build/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# Claude Code
+.claude/

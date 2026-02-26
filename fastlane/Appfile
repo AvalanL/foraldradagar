@@ -1,0 +1,6 @@
+app_identifier("com.foraldradagar.app")
+# apple_id("your@email.com")  # Your Apple Developer email
+# team_id("XXXXXXXXXX")       # Your Developer Portal Team ID
+
+# For App Store Connect:
+# itc_team_id("XXXXXXXXXX")   # App Store Connect Team ID

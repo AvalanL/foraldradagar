@@ -1,0 +1,80 @@
+default_platform(:ios)
+
+platform :ios do
+
+  # ───────────────────────────────────────────────
+  # Build
+  # ───────────────────────────────────────────────
+
+  desc "Bygg appen för release"
+  lane :build do
+    increment_build_number(
+      build_number: Time.now.strftime("%Y%m%d%H%M")
+    )
+    build_app(
+      scheme: "Foraldradagar",
+      project: "Foraldradagar/Foraldradagar.xcodeproj",
+      output_directory: "./build",
+      output_name: "Foraldradagar.ipa",
+      export_method: "app-store",
+      clean: true
+    )
+  end
+
+  # ───────────────────────────────────────────────
+  # TestFlight
+  # ───────────────────────────────────────────────
+
+  desc "Pusha till TestFlight"
+  lane :beta do
+    build
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  # ───────────────────────────────────────────────
+  # App Store Release
+  # ───────────────────────────────────────────────
+
+  desc "Publicera till App Store"
+  lane :release do
+    build
+    upload_to_app_store(
+      force: true,
+      submit_for_review: false,
+      automatic_release: false,
+      skip_screenshots: true,
+      metadata_path: "./fastlane/metadata",
+      app_version: get_version_number(
+        xcodeproj: "Foraldradagar/Foraldradagar.xcodeproj",
+        target: "Foraldradagar"
+      )
+    )
+  end
+
+  # ───────────────────────────────────────────────
+  # Metadata Only
+  # ───────────────────────────────────────────────
+
+  desc "Ladda upp metadata utan ny build"
+  lane :metadata do
+    upload_to_app_store(
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      force: true,
+      metadata_path: "./fastlane/metadata"
+    )
+  end
+
+  # ───────────────────────────────────────────────
+  # Screenshots (placeholder)
+  # ───────────────────────────────────────────────
+
+  desc "Ta screenshots med Snapshot"
+  lane :screenshots do
+    # snapshot  # Uncomment when UI tests are set up
+    UI.message("Snapshot inte konfigurerat ännu — ta screenshots manuellt eller lägg till UI-tester.")
+  end
+
+end
