@@ -20,13 +20,13 @@ price_tier 0  # Free (IAP for premium)
 
 # URLs
 privacy_url({
-  "sv-SE" => "https://foraldradagar.github.io/integritetspolicy"
+  "sv-SE" => "https://avalanl.github.io/foraldradagar/integritetspolicy"
 })
 support_url({
-  "sv-SE" => "https://foraldradagar.github.io/support"
+  "sv-SE" => "https://avalanl.github.io/foraldradagar/support"
 })
 marketing_url({
-  "sv-SE" => "https://foraldradagar.github.io/"
+  "sv-SE" => "https://avalanl.github.io/foraldradagar/"
 })
 
 # Review information
